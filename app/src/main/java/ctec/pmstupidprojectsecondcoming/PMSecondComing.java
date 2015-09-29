@@ -32,6 +32,17 @@ public class PMSecondComing extends AppCompatActivity
 
 
 
+    private void changeVisibility()
+    {
+        if(sillyWords.getVisibility() == View.GONE)
+        {
+            sillyWords.setVisibility(View.VISIBLE);
+        }
+        else
+        {
+            sillyWords.setVisibility(View.GONE);
+        }
+    }
 
 
     private void changeColors()
@@ -51,6 +62,7 @@ public class PMSecondComing extends AppCompatActivity
         greenColor = (int) (Math.random() * 256);
 
         colorChangeButton.setBackgroundColor(Color.rgb(redColor, greenColor, blueColor));
+
     }
 
     private void setupListeners()
@@ -62,6 +74,7 @@ public class PMSecondComing extends AppCompatActivity
             {
                 //This is where you put code that happens when you click a button
                 changeColors();
+                changeVisibility();
             }
         });
     }
